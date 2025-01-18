@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar with Animated Toggle</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+        </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Debasis Sahoo</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+                <button class="mobile-toggle" onclick="toggleMenu()">
+                    <span class="toggle-bar"></span>
+                    <span class="toggle-bar"></span>
+                    <span class="toggle-bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container" id="home">
+        <div class="left-section ">
+            <p class="scroll-left">Debasis Sahoo</p>
+            <div class="parenttext scroll-bottom ">I'M a <span class="text">Software Engineer</span></div>
+        </div>
+        <div class="right-section">
+            <div class="profile-container scroll-right ">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/ff0de1e3-08b9-429c-bba3-6f63ddc67692/H2onoTH6Sd.lottie" background="transparent" speed="1" style="width: 450px; height: 450px" loop autoplay></dotlottie-player>
+            </div>
+            
+        </div>
+    </div>
+    <section id="about" class="about-container ">
+        <div class="about-content">
+            <div class="image-container scroll-bottom">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/06f2fba3-3505-40d4-90c7-e0e5d55b675e/i58PkO9z74.lottie" background="transparent" speed="1" style="width: 450px; height: 450px" loop autoplay></dotlottie-player>
+            </div>
+            <div class="text-container">
+                <h2 class="scroll-top">About Me</h2>
+                <p class="scroll-left">Hi, I'm Debasis Sahoo, a passionate Software Engineer with a strong background in building scalable, efficient, and user-friendly software solutions. With expertise in full-stack development, I specialize in crafting dynamic web applications and delivering technology solutions that meet real-world needs.</p>
+                <p class="scroll-right">Currently working at Vividhity Venture Pvt Ltd, I have experience across a range of programming languages and frameworks, including Python, JavaScript, and React. My goal is to bridge the gap between innovative ideas and practical applications while staying up-to-date with emerging technologies.</p>
+                <p class="scroll-left">When I'm not coding, you can find me exploring new tech trends, contributing to open-source projects, or honing my skills to stay ahead in the ever-evolving tech world.</p>
+            </div>
+        </div>
+    </section>
+    <section class="education-section">
+        <main class="row">
+		
+            <!--   *******  Education Section Starts  *******   -->
+    
+            <section class="col">
+                
+                <header class="title">
+                    <h2>EDUCATION</h2>
+                </header>
+    
+                <div class="contents">
+                    <div class="box scroll-top">
+                        <h4>2019 - 2023</h4>
+                        <div><span><img src="./graduation.png" height="40px" width="40px" alt="School" /></span>B.Tech in CSE</div>
+                        <p>ABIT ,CDA , Cuttack</p>
+                    </div>
+    
+                    <div class="box scroll-top">
+                        <h4>2023 july - 2024 Feb</h4>
+                        <div><span><img src="./pyspider.png" height="40px" width="40px" alt="School" /></span>Python Fullstack</div>
+                        <p>PySpider, Basavanagudi , Bengaluru</p>
+                    </div>
+    
+                </div>
+            </section>
+    
+    
+            <section class="col">
+                
+                <header class="title">
+                    <h2>EXPERIENCE</h2>
+                </header>
+    
+                <div class="contents">
+                    
+                    <div class="box scroll-left">
+                        <h4>2024 March - Present</h4>
+                        <h3>Software Engineer</h3>
+                        <p>
+                            <a style="text-decoration: none; color: var(--text-color); font-size: 14px;" target="_blank" href="https://vividhity.com/">
+                                Vividhity Ventures Pvt Ltd
+                            </a>
+                        </p>
+                        <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-color);">
+                            <li>Developing and maintaining full-stack web applications using modern frameworks and technologies.</li>
+                            <li>Collaborating with cross-functional teams to deliver high-quality software solutions.</li>
+                            <li>Optimizing application performance and ensuring scalability of products.</li>
+                            <li>Conducting code reviews and mentoring junior developers for skill enhancement.</li>
+                        </ul>
+                    </div>
+                    
+    
+                    
+    
+                </div>
+            </section>
+    
+            <!--   *******  Experience Section Ends   *******  -->
+        </main>
+
+
+    </section>
+    
+    
+    <section id="services" class="my-services">
+        <h2 class="services-title">My Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon"><img src="./web.png" class="scroll-left"></div>
+                <h3>Web Development</h3>
+                <p class="scroll-top">
+                    Crafting responsive and user-friendly websites with cutting-edge technologies to ensure seamless user experiences.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><img src="./app.png"  class="scroll-bottom" alt=""></div>
+                <h3>App Development</h3>
+                <p  class="scroll-top">
+                    Developing dynamic and robust mobile applications tailored to meet client-specific needs and industry standards.
+                </p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><img src="./analysis.png"  class="scroll-right" alt=""></div>
+                <h3>Data Analysis</h3>
+                <p  class="scroll-top">
+                    Analyzing and interpreting data to drive decision-making, optimize performance, and uncover insights for businesses.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="skills-section">
+        <h2 class="skills-title">My Skills</h2>
+        <div class="skills-container">
+            <!-- Backend -->
+            <div class="skill-card scroll-left">
+                <img src="./dj.png" class="scroll-left"  alt="Django Logo" />
+            </div>
+            <div class="skill-card scroll-left">
+                <img src="./sql.png" class="scroll-top" alt="SQL Logo" />
+            </div>
+            <div class="skill-card scroll-right">
+                <img src="./mysql.png" class="scroll-top" alt="MySQL Logo" />
+            </div>
+            <div class="skill-card scroll-right">
+                <img src="./postgres.png" class="scroll-right" alt="PostgreSQL Logo" />
+            </div>
+
+            <div class="skill-card scroll-left">
+                <img src="./python2.png" class="scroll-left"  alt="Python Logo" />
+            </div>
+            <div class="skill-card scroll-left">
+                <img src="./numpy-1.svg" class="scroll-top" alt="NumPy Logo" />
+            </div>
+            <div class="skill-card scroll-right">
+                <img src="./pandas.png" class="scroll-top" alt="Pandas Logo" />
+            </div>
+            <div class="skill-card scroll-right">
+                <img src="./MatLAB.png" class="scroll-right" alt="Matplotlib Logo" />
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-card scroll-left">
+                <img src="./html2.png" class="scroll-left" alt="HTML Logo" />
+            </div>
+            <div class="skill-card scroll-left">
+                <img src="./css.png" class="scroll-top" alt="CSS Logo" />
+            </div>
+            <div class="skill-card scroll-right">
+                <img src="./java-script.png" class="scroll-top" alt="JavaScript Logo" />
+            </div>
+            <div class="skill-card scroll-right">
+                <img src="./bootstrap.png" class="scroll-right" alt="Bootstrap Logo" />
+            </div>
+
+            <!-- Data Science -->
+            
+
+            <!-- Tools -->
+            <div class="skill-card scroll-left">
+                <img src="./api.png" class="scroll-left"  alt="REST API Logo" />
+            </div>
+            <div class="skill-card scroll-left">
+                <img src="./git.png" class="scroll-top" alt="Git Logo" />
+            </div>
+            <div class="skill-card scroll-right">
+                <img src="./github.png" class="scroll-top" alt="GitHub Logo" />
+            </div>
+            <div class="skill-card scroll-right">
+                <img src="./postman.png" class="scroll-right" alt="Postman Logo" />
+            </div>
+        </div>
+    </section>
+    <div class="projects-container" id="projects">
+        <!-- Section Title -->
+        <div class="section-title">
+            <h1>Featured Projects</h1>
+            <p>Explore my recent work and creative solutions across various technologies and platforms.</p>
+        </div>
+
+        <!-- Trading Project -->
+        <div class="project">
+            <div class="project-image scroll-left">
+                <div class="image-card">
+                    <img src="./trading.png" alt="Trading Platform">
+                </div>
+            </div>
+            <div class="project-content scroll-right">
+                <h2 class="project-title">Trading Platform</h2>
+                <h3 class="project-subtitle">Cryptocurrency Trading Solution</h3>
+                <p class="project-description">
+                    An advanced trading platform that enables users to track, analyze, and trade cryptocurrencies with real-time market data and sophisticated trading tools.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-item">Django</span>
+                    <span class="tech-item">SQL</span>
+                    <span class="tech-item">Web Technology</span>
+                </div>
+                <a href="https://istreet.in" class="view-button">View Project</a>
+            </div>
+        </div>
+
+        <!-- Job Platform Project -->
+        <div class="project">
+            
+            <div class="project-image scroll-right">
+                <div class="image-card">
+                    <img src="./jobapp.png" alt="Job Platform">
+                </div>
+            </div>
+            <div class="project-content scroll-left">
+                <h2 class="project-title">Easy Get</h2>
+                <h3 class="project-subtitle">Smart Placement Management</h3>
+                <p class="project-description">
+                    An innovative placement management platform that streamlines the recruitment process, connecting students with potential employers and managing the entire placement lifecycle.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-item">Django</span>
+                    <span class="tech-item">SQL</span>
+                    <span class="tech-item">Web Technology</span>
+                </div>
+                <a href="https://github.com/Sdebasis0709/Job_Application" class="view-button">View Project</a>
+            </div>
+        </div>
+
+
+
+        <!-- Institute Project -->
+        <div class="project">
+            <div class="project-image scroll-left">
+                <div class="image-card">
+                    <img src="./institute.png" alt="Institute Platform">
+                </div>
+            </div>
+            <div class="project-content scroll-right">
+                <h2 class="project-title">APython Institute</h2>
+                <h3 class="project-subtitle">Educational Management System</h3>
+                <p class="project-description">
+                    A comprehensive learning management system designed for educational institutes, featuring course management, student tracking, and interactive learning tools.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-item">Django</span>
+                    <span class="tech-item">SQL</span>
+                    <span class="tech-item">Web Technology</span>
+                </div>
+                <a href="#" class="view-button">View Project</a>
+            </div>
+        </div>
+
+        
+        <!-- Portfolio Project -->
+        <div class="project">
+            
+            <div class="project-image scroll-right">
+                <div class="image-card">
+                    <img src="./portfolio.png" alt="Portfolio Website">
+                </div>
+            </div>
+            <div class="project-content scroll-left">
+                <h2 class="project-title">Personal Portfolio</h2>
+                <h3 class="project-subtitle">Professional Showcase Platform</h3>
+                <p class="project-description">
+                    A modern and interactive portfolio website showcasing my professional journey, technical skills, and project achievements with elegant design and smooth animations.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-item">HTML5</span>
+                    <span class="tech-item">CSS3</span>
+                    <span class="tech-item">JavaScript</span>
+                </div>
+                <a href="#" class="view-button">View Project</a>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="contact-container" id="contact">
+        <div class="contact-header">
+            <h1 class="header-title">What Next ? Let's Connect !</h1>
+            <p class="header-subtitle">Choose how you'd like to proceed - I'm excited to hear from you!</p>
+        </div>
+
+        <div class="options-container">
+            <div class="option-card" data-option="contact">
+                <div class="option-icon">📧</div>
+                <h3 class="option-title">Send Message</h3>
+                <p class="option-description">Get in touch with me directly through a message</p>
+            </div>
+            
+            <div class="option-card" data-option="cv">
+                <div class="option-icon">📄</div>
+                <h3 class="option-title"> Download CV</h3>
+                <p class="option-description">Get my detailed CV in PDF format</p>
+            </div>
+            
+            <div class="option-card" data-option="schedule">
+                <div class="option-icon">📅</div>
+                <h3 class="option-title">Schedule Call</h3>
+                <p class="option-description">Book a time for us to talk</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-input" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-input" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+
+            <!-- CV Section -->
+            <div class="cv-section">
+                <div class="cv-card">
+                    <h3>My Resume</h3>
+                    <p>Click below to download my detailed CV</p>
+                    <a href="./Debasis Sahoo.pdf" download="Debasis Sahoo" id="downloadCV" class="download-btn" onclick="downloadCV(event)">
+                        <button class="btn btn-primary" > Download CV (PDF)</button>
+                    </a>
+                   
+                </div>
+            </div>
+
+            <!-- Schedule Call Section -->
+            <div class="schedule-section" style="display: none;">
+                <div class="form-group">
+                    <label class="form-label">Preferred Date</label>
+                    <input type="date" class="form-input" name="date">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Preferred Time</label>
+                    <input type="time" class="form-input" name="time">
+                </div>
+                <button class="btn btn-primary" onclick="scheduleCall()">Schedule Call</button>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message">
+                <h3>Thank you! 🎉</h3>
+                <p>Your message has been received. I'll get back to you soon!</p>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("fade-in");
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+        
+            const skillCards = document.querySelectorAll(".skill-card");
+            skillCards.forEach((card) => {
+                observer.observe(card);
+            });
+        });
+        
+
+
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("fade-in");
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+        
+            const serviceCards = document.querySelectorAll(".service-card");
+            serviceCards.forEach((card) => {
+                observer.observe(card);
+            });
+        });
+        
+
+
+
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const toggleButton = document.querySelector('.mobile-toggle');
+            navLinks.classList.toggle('active');
+            toggleButton.classList.toggle('active');
+        }
+
+        function toggleTheme() {
+            const body = document.documentElement;
+            const currentTheme = body.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 0) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    
+    <script>
+        const texts = [
+          'Software Engineer',
+          'Fullstack Developer',
+          'Python Developer'
+        ];
+    
+        let currentIndex = 0;
+        const textElement = document.querySelector('.text');
+    
+        function splitTextIntoSpans(text) {
+          return text.split('').map(char => `<span>${char}</span>`).join('');
+        }
+    
+        function updateText() {
+          // Start dissolve animation
+          const spans = textElement.querySelectorAll('span');
+          spans.forEach((span, i) => {
+            setTimeout(() => {
+              span.style.transition = 'all 0.3s ease';
+              span.style.opacity = '0';
+              span.style.transform = 'translateY(-20px)';
+            }, i * 50);
+          });
+    
+          // After current text dissolves, show new text
+          setTimeout(() => {
+            currentIndex = (currentIndex + 1) % texts.length;
+            textElement.innerHTML = splitTextIntoSpans(texts[currentIndex]);
+            textElement.style.opacity = '1';
+            
+            // Animate each character of new text
+            const newSpans = textElement.querySelectorAll('span');
+            newSpans.forEach((span, i) => {
+              span.style.opacity = '0';
+              span.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                span.style.transition = 'all 0.3s ease';
+                span.style.opacity = '1';
+                span.style.transform = 'translateY(0)';
+              }, i * 50);
+            });
+          }, spans.length * 50 + 300);
+        }
+    
+        // Initialize first text
+        textElement.innerHTML = splitTextIntoSpans(texts[0]);
+        textElement.style.opacity = '1';
+        const initialSpans = textElement.querySelectorAll('span');
+        initialSpans.forEach((span, i) => {
+          setTimeout(() => {
+            span.style.opacity = '1';
+            span.style.transform = 'translateY(0)';
+          }, i * 50);
+        });
+    
+        // Start animation cycle
+        setInterval(updateText, 3000);
+    </script>
+    <script>
+        // Use the local path or relative path here
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-container'), // The div to render inside
+            renderer: 'svg', // Use SVG renderer
+            loop: true, // Enable looping
+            autoplay: true, // Start playing automatically
+            path: 'file:///C:/Users/debasis/Desktop/port/Animation%20-%201737142256775.json' // Full local path
+        });
+    </script>
+    <script>
+        // Create a new Intersection Observer instance
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add 'visible' class when the element is in view
+                    entry.target.classList.add('visible');
+                } else {
+                    // Remove 'visible' class when the element is out of view
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the element is visible
+    
+        // Target elements to observe
+        const elementsToObserve = document.querySelectorAll('.scroll-top, .scroll-left, .scroll-right, .scroll-bottom');
+        
+        elementsToObserve.forEach(element => {
+            observer.observe(element); // Start observing each element
+        });
+    </script>
+    
+    <script>
+       // Sequential animation with smoother transitions
+function animateTimeline() {
+    const milestones = document.querySelectorAll('.milestone');
+    milestones.forEach((milestone, index) => {
+        setTimeout(() => {
+            milestone.classList.add('visible');
+        }, index * 400); // Adjust delay for smoother effect
+    });
+}
+
+// Trigger animation on page load
+window.addEventListener('load', animateTimeline);
+
+    </script>
+    <script>
+        // Store form submissions
+        let submissions = [];
+
+        // Option selection handling
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', () => {
+                // Remove active class from all cards
+                document.querySelectorAll('.option-card').forEach(c => 
+                    c.classList.remove('active'));
+                
+                // Add active class to clicked card
+                card.classList.add('active');
+                
+                // Hide all sections
+                document.querySelector('.contact-form').style.display = 'none';
+                document.querySelector('.cv-section').style.display = 'none';
+                document.querySelector('.schedule-section').style.display = 'none';
+                document.querySelector('.success-message').style.display = 'none';
+                
+                // Show selected section
+                switch(card.dataset.option) {
+                    case 'contact':
+                        document.querySelector('.contact-form').style.display = 'block';
+                        break;
+                    case 'cv':
+                        document.querySelector('.cv-section').style.display = 'block';
+                        break;
+                    case 'schedule':
+                        document.querySelector('.schedule-section').style.display = 'block';
+                        break;
+                }
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                name: e.target.name.value,
+                email: e.target.email.value,
+                message: e.target.message.value,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Store submission
+            submissions.push(formData);
+            localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+            
+            // Show success message
+            document.querySelector('.contact-form').style.display = 'none';
+            document.querySelector('.success-message').style.display = 'block';
+            
+            // Reset form
+            e.target.reset();
+        });
+
+        function downloadCV(event) {
+            // Prevent the default link action
+            event.preventDefault();
+        
+            // Create an anchor tag dynamically to trigger the download
+            const downloadLink = document.createElement('a');
+            downloadLink.href = "Debasis Sahoo.pdf";  // Path to the CV file
+            downloadLink.download = "Debasis_Sahoo.pdf";  // Name of the file to be downloaded
+        
+            // Append the link to the body (it must be part of the DOM to work)
+            document.body.appendChild(downloadLink);
+        
+            // Programmatically click the link to start the download
+            downloadLink.click();
+        
+            // Remove the link from the DOM after the click
+            document.body.removeChild(downloadLink);
+        }
+        
+        
+
+        function scheduleCall() {
+            const date = document.querySelector('input[name="date"]').value;
+            const time = document.querySelector('input[name="time"]').value;
+            
+            if (date && time) {
+                const scheduleData = {
+                    date,
+                    time,
+                    timestamp: new Date().toISOString()
+                };
+                
+                submissions.push(scheduleData);
+                localStorage.setItem('scheduleSubmissions', JSON.stringify(submissions));
+                
+                alert('Call scheduled successfully!');
+            } else {
+                alert('Please select both date and time');
+            }
+        }
+
+        // Initialize - show contact form by default
+        document.querySelector('[data-option="contact"]').classList.add('active');
+    </script>
+    
+</body>
+</html>
