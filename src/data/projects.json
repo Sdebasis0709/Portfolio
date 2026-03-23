@@ -1,0 +1,99 @@
+[
+  {
+    "id": "iappy",
+    "name": "iAppy Chatbot",
+    "slug": "iappy",
+    "tagline": "Multi-model AI Agent Platform",
+    "icon": "🤖",
+    "color": "#ffd880",
+    "company": "Isteer Technology Pvt Ltd",
+    "period": "2025 – Present",
+    "houseType": "temple",
+    "villageX": 22,
+    "description": "iAppy is a production-grade AI chatbot platform built at Isteer Technology. It orchestrates multiple LLM providers — Azure OpenAI, ChatGPT, and Gemini — through a unified Model Context Protocol (MCP) layer, enabling seamless cross-platform AI operations with intelligent routing.",
+    "highlights": [
+      "Designed and integrated MCP tools enabling seamless communication across Azure OpenAI, ChatGPT, and Gemini",
+      "Engineered production-grade prompt templates and LLM optimization strategies improving agent consistency and response quality",
+      "Implemented AI agent architectures with orchestration and validation layers for context-aware routing and tool selection",
+      "Built RESTful APIs for AI-generated content with Redis caching for session management and high-frequency data",
+      "Optimized async HTTPX clients with connection pooling for reduced latency under production load"
+    ],
+    "stack": ["Python", "FastAPI", "Azure OpenAI", "MCP", "Redis", "HTTPX", "Docker", "CI/CD"],
+    "category": "AI / LLM",
+    "status": "Production",
+    "role": "Associate Software Engineer"
+  },
+  {
+    "id": "istreet",
+    "name": "iStreet",
+    "slug": "istreet",
+    "tagline": "Algo Trading & Investment Advisory Platform",
+    "icon": "📈",
+    "color": "#e8903a",
+    "company": "Vividhity Venture Pvt Ltd",
+    "period": "2024 – 2025",
+    "houseType": "tower",
+    "villageX": 40,
+    "description": "iStreet is a full-featured algorithmic trading and investment advisory platform built for SEBI-regulated financial operations. It handles automated trade strategy execution, real-time market data streaming, and comprehensive client-facing investment workflows.",
+    "highlights": [
+      "Built algo trading and investment advisory platforms using Python, Django, and DRF enabling automated trade strategies",
+      "Implemented SEBI-regulated fintech workflows including advisor/analyst onboarding and secure RBAC + JWT authentication",
+      "Designed RESTful APIs and optimized MySQL performance for high-volume financial and market-driven data processing",
+      "Implemented real-time trading data pipelines using WebSockets and async third-party API integrations (market data, brokers, payments)",
+      "Built automation pipelines using Celery and APScheduler for strategy execution, portfolio updates, and reporting",
+      "Ensured production reliability through PyTest-based testing, structured logging, and root-cause analysis during live market operations"
+    ],
+    "stack": ["Python", "Django", "DRF", "MySQL", "Celery", "APScheduler", "WebSockets", "HTTPX", "JWT", "Redis"],
+    "category": "Fintech",
+    "status": "Production",
+    "role": "Software Engineer"
+  },
+  {
+    "id": "rag-drive",
+    "name": "RAG Drive Assistant",
+    "slug": "rag-drive",
+    "tagline": "Document Intelligence with Retrieval-Augmented Generation",
+    "icon": "📁",
+    "color": "#c47a3a",
+    "company": "Isteer Technology Pvt Ltd",
+    "period": "2025",
+    "houseType": "hut",
+    "villageX": 58,
+    "description": "RAG Drive Assistant is an intelligent document querying system that lets users ask natural language questions over their own files. Built with a full RAG pipeline — document ingestion, vector embedding, semantic retrieval, and LLM-powered answer generation — it delivers accurate, grounded responses with source attribution.",
+    "highlights": [
+      "Built end-to-end RAG pipeline covering document ingestion, chunking, vector embedding, and semantic retrieval",
+      "Integrated vector database for fast similarity search across large document corpora",
+      "Engineered LLM prompt chains for accurate, context-grounded answer generation with source attribution",
+      "Designed async FastAPI backend for concurrent document processing and query handling",
+      "Implemented support for multiple document formats with intelligent chunking strategies"
+    ],
+    "stack": ["Python", "FastAPI", "Vector DB", "HuggingFace", "Transformers", "LLMs", "RAG", "Azure OpenAI"],
+    "category": "AI / GenAI",
+    "status": "Production",
+    "role": "Associate Software Engineer"
+  },
+  {
+    "id": "iamaiplus",
+    "name": "iAmAIPlus",
+    "slug": "iamaiplus",
+    "tagline": "Future Coding School Platform",
+    "icon": "🏫",
+    "color": "#ffd880",
+    "company": "Personal / Freelance",
+    "period": "2024",
+    "houseType": "school",
+    "villageX": 76,
+    "description": "iAmAIPlus is a full-stack Django-powered coding school platform designed to onboard and teach programming to the next generation. It provides structured curriculum delivery, student progress tracking, and an interactive learning environment — built with scalability in mind for future AI-assisted tutoring.",
+    "highlights": [
+      "Built full-stack Django application with comprehensive student onboarding and authentication system",
+      "Designed relational database schema for curriculum management, student progress, and course tracking",
+      "Implemented role-based access for admins, instructors, and students with tailored dashboards",
+      "Created responsive frontend with Bootstrap for cross-device compatibility",
+      "Architected the platform for future integration of AI-assisted tutoring and automated code assessment"
+    ],
+    "stack": ["Python", "Django", "PostgreSQL", "HTML", "CSS", "Bootstrap", "DRF", "JWT"],
+    "category": "EdTech / Fullstack",
+    "status": "Development",
+    "role": "Full Stack Developer"
+  }
+]

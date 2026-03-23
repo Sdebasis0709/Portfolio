@@ -1,0 +1,402 @@
+/* ── Section wrapper ────────────────────────────────────────── */
+.section {
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.6s;
+}
+
+/* ── Section title ──────────────────────────────────────────── */
+.sTitle        { text-align:center; padding:0 24px; margin-bottom:56px; }
+.sTitleEmoji   { font-size:3rem; margin-bottom:8px; }
+.sTitleText    { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,3.2rem); margin:0 0 8px; text-shadow:0 0 40px #ff880044; transition:color 0.4s; }
+.sTitleSub     { font-family:'Crimson Text',serif; font-style:italic; font-size:1.1rem; letter-spacing:0.1em; margin:0; transition:color 0.4s; }
+.sTitleLine    { width:90px; height:2px; background:linear-gradient(90deg,transparent,#c47a3a,transparent); margin:16px auto 0; }
+
+/* ── Generic card ───────────────────────────────────────────── */
+.card {
+  border-radius: 14px;
+  padding: 28px 26px;
+  transition: background 0.4s, border-color 0.4s, box-shadow 0.3s, transform 0.3s;
+}
+.card:hover { box-shadow:0 10px 30px rgba(196,122,58,0.14); }
+
+/* ── ABOUT ──────────────────────────────────────────────────── */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (max-width: 840px) {
+  .aboutGrid { grid-template-columns:1fr; }
+}
+
+.aboutP {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.18rem;
+  line-height: 1.9;
+  margin: 0 0 18px;
+  transition: color 0.4s;
+}
+
+.chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+.chip  {
+  font-family:'Crimson Text',serif;
+  font-size:.9rem;
+  border:1px solid;
+  border-radius:30px;
+  padding:4px 15px;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* ── SKILLS ─────────────────────────────────────────────────── */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.skillCard {
+  border-radius: 12px;
+  padding: 22px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.4s, border-color 0.4s;
+}
+.skillCard:hover { transform:translateY(-5px); box-shadow:0 12px 32px rgba(196,122,58,0.15); }
+
+.stallRoof {
+  position: absolute;
+  top:0; left:0; right:0;
+  height: 3px;
+  background: linear-gradient(90deg,#c47a3a,#ffd880,#c47a3a);
+}
+
+.stallName {
+  font-family:'Playfair Display',serif;
+  font-size:.97rem;
+  font-weight:700;
+  margin-bottom:12px;
+  transition: color 0.4s;
+}
+
+.skillTags { display:flex; flex-wrap:wrap; gap:6px; }
+.skillTag  {
+  font-family:'Crimson Text',serif;
+  font-size:.85rem;
+  border-radius:20px;
+  padding:2px 10px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ── EXPERIENCE ─────────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  /* no horizontal padding — we handle spacing inside cards so the
+     centre line sits at exactly 50% of this container            */
+}
+
+/* The vertical line sits dead-centre of .timeline */
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg,#c47a3a,#ffd880,#c47a3a);
+  transform: translateX(-50%);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Each row is a 3-col grid: card | 40px dot-col | card
+   The centre column is wide enough to hold the dot + some breathing room */
+.timelineRow {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  align-items: start;
+  margin-bottom: 52px;
+  position: relative;
+}
+
+/* ── LEFT row: card in col-1, dot in col-2, nothing in col-3 ── */
+.left .timelineCard {
+  grid-column: 1;
+  grid-row: 1;
+  margin-right: 20px;       /* gap between card and the centre dot-col */
+}
+.left .timelineDot {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: start;
+  margin-top: 30px;         /* aligns with card header */
+}
+/* empty placeholder so the right column stays in the grid */
+.left .timelineSpacer {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* ── RIGHT row: nothing in col-1, dot in col-2, card in col-3 ── */
+.right .timelineSpacer {
+  grid-column: 1;
+  grid-row: 1;
+}
+.right .timelineDot {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: start;
+  margin-top: 30px;
+}
+.right .timelineCard {
+  grid-column: 3;
+  grid-row: 1;
+  margin-left: 20px;
+}
+
+.timelineCard {
+  border-radius: 12px;
+  padding: 24px 26px;
+  border-top: 2px solid;
+  transition: background 0.4s, border-color 0.3s, box-shadow 0.3s;
+}
+.timelineCard:hover { box-shadow: 0 8px 28px rgba(196,122,58,0.14); }
+
+.timelineDot {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 3px solid;       /* border colour set inline via JS */
+  border-color: inherit;
+  transition: box-shadow 0.3s;
+  position: relative;
+  z-index: 2;              /* sit above the line */
+}
+
+.jobRole    { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:5px; transition:color 0.4s; }
+.jobCompany { font-family:'Crimson Text',serif; font-size:1rem; transition:color 0.4s; }
+.jobPeriod  { font-family:'Crimson Text',serif; font-size:.88rem; margin-bottom:14px; transition:color 0.4s; }
+.jobPoints  { list-style:disc; padding-left:18px; margin:0; font-family:'Crimson Text',serif; font-size:.97rem; line-height:1.7; transition:color 0.4s; }
+.jobPoints li { margin-bottom:5px; }
+
+/* ── Mobile timeline ─────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .timeline { padding: 0 16px; }
+  .timelineLine { left: 20px; transform: none; }
+
+  .timelineRow {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto;
+  }
+  /* on mobile: dot col-1, card col-2, spacer hidden */
+  .left  .timelineDot,
+  .right .timelineDot  { grid-column:1; grid-row:1; margin-top:26px; justify-self:center; }
+  .left  .timelineCard,
+  .right .timelineCard { grid-column:2; grid-row:1; margin-left:12px; margin-right:0; }
+  .left  .timelineSpacer,
+  .right .timelineSpacer { display:none; }
+}
+
+/* ── EDUCATION ──────────────────────────────────────────────── */
+.eduGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  gap: 22px;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eduCard {
+  border-radius: 12px;
+  padding: 26px 22px;
+  transition: transform 0.3s, background 0.4s, border-color 0.4s;
+}
+.eduCard:hover { transform:translateY(-4px); }
+
+.eduIcon   { font-size:2rem; margin-bottom:10px; }
+.eduTitle  { font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; margin-bottom:6px; transition:color 0.4s; }
+.eduOrg    { font-family:'Crimson Text',serif; font-size:.97rem; transition:color 0.4s; }
+.eduPeriod { font-family:'Crimson Text',serif; font-size:.88rem; margin-top:5px; transition:color 0.4s; }
+
+/* ── ACHIEVEMENTS ───────────────────────────────────────────── */
+.achieveGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.achieveCard {
+  border-radius: 16px;
+  padding: 36px 30px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.4s;
+}
+.achieveCard:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(196,122,58,0.18); }
+
+.achieveIcon  { font-size:3rem; margin-bottom:12px; }
+.achieveLabel { font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; margin-bottom:12px; transition:color 0.4s; }
+.achieveText  { font-family:'Crimson Text',serif; font-size:1.05rem; line-height:1.75; margin:0; transition:color 0.4s; }
+
+/* ── CONTACT ────────────────────────────────────────────────── */
+.contactWrap  { text-align:center; }
+.contactLinks { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; padding:0 24px; }
+
+.contactLink {
+  font-family:'Crimson Text',serif;
+  font-size:1.05rem;
+  border-radius:30px;
+  padding:10px 24px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+.footer {
+  padding: 30px 24px;
+  text-align: center;
+  border-top: 1px solid;
+  transition: background 0.4s, border-color 0.4s;
+}
+.footerText { font-family:'Playfair Display',serif; font-size:1rem; transition:color 0.4s; }
+.footerSub  { font-family:'Crimson Text',serif; font-style:italic; font-size:.85rem; margin-top:6px; transition:color 0.4s; }
+
+/* ── Global responsive ──────────────────────────────────────── */
+@media (max-width: 840px) {
+  .aboutGrid { grid-template-columns: 1fr; gap: 32px; }
+  .aboutGrid > div:first-child { display: flex; justify-content: center; }
+  .aboutGrid > div:first-child svg { max-width: 240px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .sTitle  { margin-bottom: 36px; padding: 0 16px; }
+  .sTitleText { font-size: clamp(1.5rem, 6vw, 2.4rem); }
+  .skillsGrid { padding: 0 16px; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .eduGrid    { padding: 0 16px; gap: 14px; grid-template-columns: 1fr; }
+  .achieveGrid { padding: 0 16px; grid-template-columns: 1fr; gap: 20px; }
+  .contactLinks { padding: 0 16px; gap: 10px; }
+  .contactLink { font-size: 0.9rem; padding: 8px 16px; }
+  .chips { gap: 7px; }
+  .chip  { font-size: 0.82rem; padding: 3px 11px; }
+  .aboutP { font-size: 1.05rem; }
+}
+
+@media (max-width: 700px) {
+  .timeline { padding: 0 16px; }
+  .timelineRow { grid-template-columns: 1fr; position: relative; padding-left: 28px; }
+  .timelineLine { left: 7px; }
+  .left  .timelineCard,
+  .right .timelineCard { grid-column: 1; grid-row: 1; margin: 0 !important; }
+  .left  .timelineDot,
+  .right .timelineDot  {
+    grid-column: 1; grid-row: 1;
+    position: absolute;
+    left: -22px;
+    top: 30px;
+    margin-top: 0;
+  }
+  .left  > :last-child,
+  .right > :first-child { display: none; }
+}
+
+@media (max-width: 480px) {
+  .skillsGrid { grid-template-columns: 1fr 1fr; }
+  .skillCard  { padding: 16px 14px; }
+  .stallName  { font-size: 0.85rem; }
+  .skillTag   { font-size: 0.78rem; padding: 2px 8px; }
+  .jobPoints  { font-size: 0.9rem; }
+  .timelineCard { padding: 18px 16px; }
+}
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE — mobile-first breakpoints
+════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (≤ 900px) ────────────────────────────────────── */
+@media (max-width: 900px) {
+  .section { padding: 60px 0; }
+
+  /* About */
+  .aboutGrid { grid-template-columns: 1fr; gap: 32px; text-align: center; padding: 0 20px; }
+  .aboutGrid > :first-child { display: flex; justify-content: center; }
+  .aboutGrid > :first-child svg { max-width: 220px; }
+  .chips { justify-content: center; }
+
+  /* Skills */
+  .skillsGrid { grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); padding: 0 16px; gap: 16px; }
+
+  /* Edu */
+  .eduGrid { grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); padding: 0 16px; }
+
+  /* Achievements */
+  .achieveGrid { padding: 0 16px; gap: 20px; }
+
+  /* Contact */
+  .contactLinks { gap: 10px; padding: 0 16px; }
+}
+
+/* ── Mobile (≤ 600px) ────────────────────────────────────── */
+@media (max-width: 600px) {
+  .section { padding: 48px 0; }
+  .sTitleText  { font-size: clamp(1.4rem, 6vw, 2rem); }
+  .sTitleSub   { font-size: 0.97rem; }
+  .sTitle      { padding: 0 16px; margin-bottom: 36px; }
+
+  /* About */
+  .aboutGrid { padding: 0 16px; gap: 24px; }
+  .aboutP    { font-size: 1.05rem; }
+  .chip      { font-size: 0.82rem; padding: 3px 12px; }
+
+  /* Skills */
+  .skillsGrid  { grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; }
+  .skillCard   { padding: 16px 14px; }
+  .stallName   { font-size: 0.88rem; }
+  .skillTag    { font-size: 0.78rem; padding: 2px 8px; }
+
+  /* Experience timeline — already handled above */
+  .jobRole    { font-size: 0.97rem; }
+  .jobCompany { font-size: 0.9rem; }
+  .jobPoints  { font-size: 0.88rem; }
+  .timelineCard { padding: 16px 16px; }
+
+  /* Education */
+  .eduGrid  { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
+  .eduCard  { padding: 18px 16px; }
+  .eduTitle { font-size: 0.92rem; }
+
+  /* Achievements */
+  .achieveGrid { grid-template-columns: 1fr; padding: 0 16px; gap: 16px; }
+  .achieveCard { padding: 24px 20px; }
+  .achieveText { font-size: 0.97rem; }
+
+  /* Contact */
+  .contactLinks { flex-direction: column; align-items: center; gap: 10px; padding: 0 16px; }
+  .contactLink  { width: 100%; justify-content: center; max-width: 340px; }
+
+  /* Footer */
+  .footer     { padding: 22px 16px; }
+  .footerText { font-size: 0.9rem; }
+}
+
+/* ── Small mobile (≤ 380px) ──────────────────────────────── */
+@media (max-width: 380px) {
+  .skillsGrid { grid-template-columns: 1fr; }
+  .sTitleText { font-size: 1.3rem; }
+}

@@ -1,0 +1,155 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* Sun/moon toggle — needs its own positioning + clicks enabled */
+.celestialBtn {
+  position: absolute;
+  left: 50%;
+  margin-left: -95px;
+  width: 190px;
+  height: 190px;
+  cursor: pointer;
+  z-index: 30;
+  pointer-events: all;
+  will-change: transform;
+  transition: filter 0.3s, transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+.celestialBtn:hover { transform: scale(1.08); filter: brightness(1.15); }
+.celestialBtn:active { transform: scale(0.95); }
+
+.heroText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  text-align: center;
+  z-index: 20;
+  pointer-events: none;
+  transition: opacity 0.1s linear;
+}
+
+.heroSub {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  color: #f5c880;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 12px #1a0800;
+}
+
+.heroName {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  color: #ffd880;
+  line-height: 1.05;
+  text-shadow: 0 0 80px #ff8800, 0 4px 24px #1a0800, 0 0 160px #ff660060;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+
+.heroRole {
+  font-family: 'Crimson Text', serif;
+  font-size: clamp(1rem, 2.2vw, 1.55rem);
+  color: #f5c070;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px #1a0800;
+  margin-bottom: 24px;
+}
+
+.heroBadges {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.badge {
+  font-family: 'Crimson Text', serif;
+  font-size: 0.9rem;
+  color: #fde8a0;
+  background: rgba(61, 26, 0, 0.6);
+  border: 1px solid #c47a3a;
+  border-radius: 30px;
+  padding: 4px 16px;
+  backdrop-filter: blur(6px);
+}
+
+.scrollHint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Crimson Text', serif;
+  font-size: 0.95rem;
+  color: #c47a3a;
+  letter-spacing: 0.1em;
+}
+
+.scrollArrow {
+  font-size: 1.4rem;
+  animation: bounce 1.8s ease-in-out infinite;
+  color: #ffd880;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(10px); }
+}
+
+/* Entry gate arch overlay */
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to top, #0d0400 0%, transparent 100%);
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .celestialBtn {
+    width: 120px !important;
+    height: 120px !important;
+    margin-left: -60px !important;
+  }
+  .heroName { font-size: clamp(2.2rem, 12vw, 4rem) !important; }
+  .heroRole { font-size: clamp(0.8rem, 3.5vw, 1.1rem) !important; letter-spacing: 0.08em !important; }
+  .heroBadges { gap: 6px; }
+  .badge { font-size: 0.78rem; padding: 3px 10px; }
+}
+
+/* ── Hero responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .heroName   { font-size: clamp(2.2rem, 10vw, 4rem); }
+  .heroRole   { font-size: clamp(0.82rem, 3.5vw, 1.2rem); letter-spacing: 0.1em; }
+  .heroSub    { font-size: clamp(0.85rem, 3vw, 1.1rem); }
+  .heroBadges { gap: 7px; }
+  .badge      { font-size: 0.78rem; padding: 3px 11px; }
+}
+
+@media (max-width: 480px) {
+  .heroName   { font-size: clamp(2rem, 11vw, 3rem); }
+  .heroText   { width: 92%; }
+  .celestialBtn { margin-left: -60px; width: 120px; height: 120px; }
+}

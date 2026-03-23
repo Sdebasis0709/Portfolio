@@ -1,0 +1,117 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+}
+
+/* ── Logo ────────────────────────────────────────────────── */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.02em;
+  transition: color 0.3s;
+  flex-shrink: 0;
+}
+.logo span { text-shadow: 0 0 20px #ff880066; }
+
+/* ── Desktop links ───────────────────────────────────────── */
+.desktopLinks {
+  display: flex;
+  gap: 2px;
+  flex-wrap: nowrap;
+}
+
+.link {
+  font-family: 'Crimson Text', serif;
+  font-size: 0.88rem;
+  background: none;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.link:hover {
+  background: rgba(196,122,58,0.2);
+}
+
+/* ── Hamburger button — hidden on desktop ────────────────── */
+.burger {
+  display: none;
+  background: none;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+.burger:hover { background: rgba(196,122,58,0.15); }
+
+/* ── Mobile dropdown menu ────────────────────────────────── */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 52px;
+  left: 0; right: 0;
+  z-index: 190;
+  border-bottom: 1px solid;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mobileLink {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  padding: 16px 28px;
+  cursor: pointer;
+  text-align: left;
+  letter-spacing: 0.06em;
+  width: 100%;
+}
+
+/* ── Backdrop ────────────────────────────────────────────── */
+.backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 180;
+  background: rgba(0,0,0,0.3);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .desktopLinks { display: none; }
+  .burger       { display: flex; }
+  .mobileMenu   { display: flex; }
+  .backdrop     { display: block; }
+}
+
+@media (max-width: 380px) {
+  .nav { padding: 10px 14px; }
+  .logo { font-size: 0.95rem; }
+}
