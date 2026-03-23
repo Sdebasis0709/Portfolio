@@ -359,7 +359,7 @@ export function Contact() {
           {[
             { icon:'📧', label:'sahoodebasis125@gmail.com', href:'mailto:sahoodebasis125@gmail.com' },
             { icon:'📱', label:'8197742883',                href:'tel:+918197742883' },
-            { icon:'💼', label:'debasis-sahoo (LinkedIn)',  href:'https://linkedin.com/in/debasis-sahoo' },
+            { icon:'💼', label:'debasis-sahoo (LinkedIn)',  href:'https://www.linkedin.com/in/debasis-sahoo-5a7866249/' },
             { icon:'📍', label:'Bengaluru, India',          href:null },
           ].map((c,i)=>(
             <a key={i} href={c.href||'#'} className={s.contactLink}
